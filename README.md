@@ -31,8 +31,8 @@ chmod +x /usr/local/bin/docker-compose
  Directory structure
 ====================
 
-- deploy ( files for project  )
-- state  ( for storing state like databases, session )
+- deploy ( files related to containers  )
+- state  ( for storing state like databases, session etc, this is not a place for Dockerfiles )
 
 Basic Usage
 ===========
