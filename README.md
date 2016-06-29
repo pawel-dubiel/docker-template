@@ -33,6 +33,8 @@ chmod +x /usr/local/bin/docker-compose
 
 - deploy ( files related to containers  )
 - state  ( for storing state like databases, session etc, this is not a place for Dockerfiles )
+- temp   ( for storing temporary files ( database dumps etc )
+- logs   ( for storing logs ( apache, mysql ) )
 
 Basic Usage
 ===========
