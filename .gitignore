@@ -1,0 +1,15 @@
+/state/mariadb/mysql/*
+!/state/mariadb/mysql/.gitkeep
+
+/data/dump/*
+!/data/dump/.gitkeep
+application/*
+!application/.gitkeep
+/logs/apache/*
+!/logs/apache/.gitkeep
+files/docker/web/config/ssl/*
+!files/docker/web/config/ssl/.gitkeep
+.env
+.makeenv
+/temp/*
+!/temp/.gitkeep

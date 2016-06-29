@@ -1,0 +1,6 @@
+#!/bin/bash
+
+mysql -uroot -ppassword -Bse "DROP DATABASE IF EXISTS database_name;CREATE DATABASE database_name"
+
+mysql -uroot -ppassword database_name < /sqldata/dump/data.sql
+
