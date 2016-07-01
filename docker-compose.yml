@@ -22,6 +22,6 @@ services:
 
   redis:
     env_file: .env
-    image: redis:3.0.7
+    image: redis:3.0.7-alpine
     ports:
         - "6379:6379"
