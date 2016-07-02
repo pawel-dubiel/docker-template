@@ -23,10 +23,13 @@ install docker compose at least 1.11
 ### install docker compose
   follow instructions on docker website however it should be something like below
 
+```bash
 curl -L https://github.com/docker/compose/releases/download/1.7.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+```
 
+```bash
 chmod +x /usr/local/bin/docker-compose
-
+```
 
  Directory structure
 ====================
