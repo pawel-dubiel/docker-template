@@ -26,7 +26,9 @@ build:
 #here put code for downloading sources for the project it can be also git clone,  rsync, scp etc.. 
 get_project:
 	#rsync -arv --progress  --exclude-from '.ignore_rsync' user@example.com:/  $(C_D)/application/web
-	git clone https://github.com/pawel-dubiel/dummy-project $(C_D)/application/web
+	#git clone https://github.com/pawel-dubiel/dummy-project $(C_D)/application/web
+	rsync -arv root@inspired.kilo75.com:/var/www/dev.inspired.kilo75.com/  $(C_D)/application
+    
 
 #download db file from external server ( here you could put code 
 download_database: 
@@ -36,7 +38,7 @@ download_database:
 
 #upload previously downloaded database to container + execute all postscripts database updates
 sync_db:
-	docker exec -it $(PROJECT_NAME)_mariadb_1 /bin/sh  -c "/deploy/docker/mariadb/update_container_db"
+	docker exec -it $(PROJECT_NAME)_mariadb_1 /bin/sh  -c "/sqldata/update_container_db"
 
 #ssh login to apache container
 ssh_apache:
@@ -49,6 +51,11 @@ ssh_sql:
 #ssh login to redis container
 ssh_redis:
 	docker exec -it $(PROJECT_NAME)_redis_1 /bin/bash
+
+#ssh login to sorl container
+ssh_solr:
+	docker exec -it $(PROJECT_NAME)_solr_1 /bin/bash
+
 
 #Delete all the keys of all the existing databases in redis. This command never fails.
 redis_flush:
