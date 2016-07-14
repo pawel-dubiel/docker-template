@@ -27,7 +27,6 @@ build:
 get_project:
 	#rsync -arv --progress  --exclude-from '.ignore_rsync' user@example.com:/  $(C_D)/application/web
 	#git clone https://github.com/pawel-dubiel/dummy-project $(C_D)/application/web
-	rsync -arv root@inspired.kilo75.com:/var/www/dev.inspired.kilo75.com/  $(C_D)/application
     
 
 #download db file from external server ( here you could put code 
